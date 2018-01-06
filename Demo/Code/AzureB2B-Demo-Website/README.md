@@ -1,31 +1,17 @@
 ---
-services: active-directory
-platforms: javascript
-author: jmprieur
+Demo: Azure Active Directory B2B
+Presentation: N/A
 ---
 
 # Integrating Azure AD into an AngularJS single page app
 
-This sample demonstrates the use of ADAL for JavaScript for securing an AngularJS based single page app, implemented with an ASP.NET Web API backend.
+This sample demonstrates the use of ADAL for JavaScript for securing an AngularJS based single page app.
 
 ADAL for Javascript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at https://github.com/AzureAD/azure-activedirectory-library-for-js.
 
 For more information about how the protocols work in this scenario and other scenarios, see [Authentication Scenarios for Azure AD](http://go.microsoft.com/fwlink/?LinkId=394414).
 
-## How To Run This Sample
-
-Getting started is simple!  To run this sample you will need:
-- Visual Studio 2013
-- An Internet connection
-- An Azure Active Directory (Azure AD) tenant. For more information on how to get an Azure AD tenant, please see [How to get an Azure AD tenant](https://azure.microsoft.com/en-us/documentation/articles/active-directory-howto-tenant/) 
-- A user account in your Azure AD tenant. This sample will not work with a Microsoft account, so if you signed in to the Azure portal with a Microsoft account and have never created a user account in your directory before, you need to do that now.
-
-### Step 1:  Clone or download this repository
-
-From your shell or command line:
-`git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git`
-
-### Step 2:  Register the sample with your Azure Active Directory tenant
+### Step 1:  Register the sample with your Azure Active Directory tenant
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. On the top bar, click on your account and under the **Directory** list, choose the Active Directory tenant where you wish to register your application.
@@ -37,7 +23,7 @@ From your shell or command line:
 8. For the App ID URI, enter `https://<your_tenant_name>/SinglePageApp-DotNet`, replacing `<your_tenant_name>` with the name of your Azure AD tenant. 
 9. Grant permissions across your tenant for your application. Go to Settings -> Properties -> Required Permissions, and click on the **Grant Permissions** button in the top bar. Click **Yes** to confirm.
 
-### Step 3:  Enable the OAuth2 implicit grant for your application
+### Step 2:  Enable the OAuth2 implicit grant for your application
 
 By default, applications provisioned in Azure AD are not enabled to use the OAuth2 implicit grant. In order to run this sample, you need to explicitly opt in.
 
@@ -45,7 +31,7 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 2. From your application page, choose **Manifest** to open the inline manifest editor.
 3. Search for the `oauth2AllowImplicitFlow` property. You will find that it is set to `false`; change it to `true` and click on **Save** to save the manifest.
 
-### Step 4:  Configure the sample to use your Azure Active Directory tenant
+### Step 3:  Configure the sample to use your Azure Active Directory tenant
 
 1. Open the solution in Visual Studio 2013.
 2. Open the `web.config` file.
@@ -55,7 +41,7 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 6. Replace the value of `tenant` with your AAD tenant name.
 7. Replace the value of `clientId` with the Application ID from the Azure portal.
 
-### Step 5:  Run the sample
+### Step 4:  Run the sample
 
 Clean the solution, rebuild the solution, and run it. 
 
@@ -65,7 +51,9 @@ Notice that you can close and reopen the browser without losing your session. AD
 
 ## How To Deploy This Sample to Azure
 
-Coming soon.
+1. Open solution and hit publish to a `Azure Website`
+2. Done
+
 
 ## About the Code
 
